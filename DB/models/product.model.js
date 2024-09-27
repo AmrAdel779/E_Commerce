@@ -65,7 +65,7 @@ const schema = new Schema({
 
 schema.post('init', (doc) => {
     if (doc.imgCover) doc.imgCover = process.env.Base_Url + "productUpload/" + doc.imgCover
-    if (doc.images) doc.images = doc.images.map(img => process.env.Base_Url + "/productUpload/" + img)
+    if (doc.images) doc.images = doc.images.map(img => process.env.Base_Url + "productUpload/" + img)
 })
 schema.virtual('myReviews', {
     ref: 'Review',
