@@ -26,7 +26,6 @@ const schema = new Schema({
     },
     priceAfterDiscount: {
         type: Number,
-        required: true,
         min: 0
     },
     sold: {
